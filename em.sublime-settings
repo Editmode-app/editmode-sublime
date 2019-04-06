@@ -1,0 +1,10 @@
+{
+    "em_urls": {
+    	"create" : "https://www.editmode.app/api/v1/bits"
+    },
+    "em_default_snippet_template" : "rails_interpolated",
+    "em_snippet_templates" : {
+      "rails_interpolated" : "#{bit('{label}','{identifier}')}",
+      "rails_haml" : "=bit('{label}','{identifier}')",
+    }
+}
