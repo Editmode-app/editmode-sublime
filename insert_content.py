@@ -53,12 +53,14 @@ class InsertContentCommand(sublime_plugin.TextCommand):
         response_as_string = response.read().decode('utf8')
         response_as_json = json.loads(response_as_string)
 
-        bit_info = response_as_json["bit"]
+        bit_info = response_as_json
         
         bit_identifier = bit_info['identifier']
         bit_content = bit_info['content']
 
         shortened_original_content = bit_content[:10] + (bit_content[10:] and '..')
+        shortened_original_content = shortened_original_content.replace('"','')
+        shortened_original_content = shortened_original_content.replace(",","")
 
         replacement_text = snippet_template.replace("{identifier}", bit_identifier)
         replacement_text = replacement_text.replace("{label}", shortened_original_content)
