@@ -1,6 +1,6 @@
 {
     "em_urls": {
-    	"create" : "https://www.editmode.app/api/v1/bits"
+    	"create" : "https://api.editmode.com/bits"
     },
     "em_default_snippet_template" : "rails_interpolated",
     "em_snippet_templates" : {
